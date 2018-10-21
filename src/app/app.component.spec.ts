@@ -1,5 +1,6 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
