@@ -11,24 +11,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CssPracticeComponent implements OnInit {
 
-  practice = [
-    {
-      name:"css",
-      route:"css-practice"
-    },
-    {
-      name:"",
-      route:""
-    },
-    {
-      name:"",
-      route:""
-    },
-    {
-      name:"",
-      route:""
-    },
-  ]
+  
   constructor(){}
 
   ngOnInit() {

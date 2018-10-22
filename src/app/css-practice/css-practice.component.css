@@ -1,0 +1,9 @@
+#border-test {
+  width: 0;
+  height: 0;
+  border: 100px solid #fff;
+  border-left-color: red;
+  border-right-color: aqua;
+  border-bottom-color:transparent;
+  border-top-color: blueviolet;
+}
