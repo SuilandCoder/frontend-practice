@@ -1,3 +1,4 @@
+import { MatSharedModule } from './common/mat-shared/index';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -6,8 +7,8 @@ import { AppComponent } from './app.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { AppRoutingModule } from './app-routing.module';
 import { CssPracticeComponent } from './css-practice/css-practice.component';
-import { PracticeListComponent } from './practice-list/practice-list.component';
-
+import { PracticeListComponent } from './practice-list/practice-list.component'; 
+import { MatIconModule } from '@angular/material';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,8 +17,10 @@ import { PracticeListComponent } from './practice-list/practice-list.component';
   ],
   imports: [
     BrowserModule,
+    MatIconModule,
     MatGridListModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatSharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

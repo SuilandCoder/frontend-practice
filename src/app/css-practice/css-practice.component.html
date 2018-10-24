@@ -1,8 +1,97 @@
 <ul>
   <li>
+    <p>选择器权重：</p>
+    <table class="mat-elevation-z8" mat-table [dataSource]="weights">
+      <ng-container matColumnDef="selector">
+        <th mat-header-cell *matHeaderCellDef>选择器</th>
+        <td mat-cell *matCellDef="let item">{{item.name}}</td>
+      </ng-container>
+      <ng-container matColumnDef="weights">
+        <th mat-header-cell *matHeaderCellDef>权重</th>
+        <td mat-cell *matCellDef="let item">{{item.weight}}</td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns:displayedColumns;"></tr>
+    </table>
+  </li>
+  <li>
     <p>
       巧妙使用 border 属性：
     </p>
     <div id="border-test"></div>
+  </li>
+  <li>
+    <p>
+      行级/块级/行块级选择器：
+    </p>
+    <table class="mat-elevation-z8" mat-table [dataSource]="inline_block_selectors">
+      <ng-container matColumnDef="type">
+        <th mat-header-cell *matHeaderCellDef>选择器类型</th>
+        <td mat-cell *matCellDef="let item">{{item.type}}</td>
+      </ng-container>
+      <ng-container matColumnDef="feature">
+        <th mat-header-cell *matHeaderCellDef>特点</th>
+        <td mat-cell *matCellDef="let item">{{item.feature}}</td>
+      </ng-container>
+      <ng-container matColumnDef="tags">
+        <th mat-header-cell *matHeaderCellDef>标签</th>
+        <td mat-cell *matCellDef="let item">{{item.tags}}</td>
+      </ng-container>
+      <ng-container matColumnDef="attr">
+        <th mat-header-cell *matHeaderCellDef>display属性</th>
+        <td mat-cell *matCellDef="let item">{{item.attr}}</td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="dis_col_ibs"></tr>
+      <tr mat-row *matRowDef="let row; columns:dis_col_ibs;"></tr>
+    </table>
+  </li>
+  <li>
+    <p>
+      盒子模型使用：
+    </p>
+    <div class="box1">
+      <div class="box2">
+        <div class="box3">
+          <div class="box4"></div>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li>
+    <p>
+      定位：
+    </p>
+    <p>
+      <span>
+        <strong>absolute:</strong>
+        脱离原来位置进行定位(其他控件会占据该控件原来位置)，相对于最近的有定位的父级进行定位，没有则相对于文档定位！
+      </span>
+    </p>
+    <p>
+      <span>
+        <strong>relative:</strong>
+        保留原来位置进行定位，相对于自己原来的位置进行定位！
+      </span>
+    </p>
+    <p>
+      <span>
+        <strong>定位技巧: </strong>
+        <span style="color: #f40">relative作为参照物，absolute用来定位（不会因为父级位置变动导致定位错乱）。</span>
+      </span>
+    </p>
+  </li> 
+  <li>
+    <p>
+      居中五环：
+    </p>
+    <button mat-raised-button (click)="show_rings = !show_rings">{{show_rings?'hide':'show'}}</button>
+    <div *ngIf="show_rings" class="five-rings">
+      <div class="ring1"></div>
+      <div class="ring2"></div>
+      <div class="ring3"></div>
+      <div class="ring4"></div>
+      <div class="ring5"></div>
+    </div>
+
   </li>
 </ul>

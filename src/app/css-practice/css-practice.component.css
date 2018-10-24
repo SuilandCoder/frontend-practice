@@ -1,3 +1,8 @@
+
+table{
+  width:60%;
+  min-width: 300px;
+}
 #border-test {
   width: 0;
   height: 0;
@@ -7,3 +12,93 @@
   border-bottom-color:transparent;
   border-top-color: blueviolet;
 }
+
+.box4{
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+}
+
+.box3{
+  width:10px;
+  height: 10px;
+  background-color: #0f0;
+  padding: 10px;
+}
+
+.box2{
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.box1{
+  width:50px;
+  height: 50px;
+  background-color: #0f0;
+  padding: 10px;
+}
+
+.five-rings{
+  position:fixed;
+  top: 50%;
+  left:50%;
+  width: 290px;
+  height: 130px;
+  margin-top: -65px;
+  margin-left:-145px;
+  /* box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);  */
+}
+.ring1{
+  position: absolute; 
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border:5px solid;
+  border-color: purple;
+}
+.ring2{
+  position: absolute; 
+  left: 100px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border:5px solid;
+  border-color: black;
+}
+
+.ring3{
+  position: absolute; 
+  left: 200px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border:5px solid;
+  border-color: red;
+}
+
+
+.ring4{
+  position: absolute;
+  top: 45px;
+  left: 50px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border:5px solid;
+  border-color: yellow;
+}
+
+.ring5{
+  position: absolute;
+  top: 45px;
+  left: 150px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border:5px solid;
+  border-color: green;
+}
+
+
