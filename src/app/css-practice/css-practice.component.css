@@ -50,54 +50,42 @@ table{
   margin-left:-145px;
   /* box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);  */
 }
-.ring1{
+
+.ring1,
+.ring2,
+.ring3,
+.ring4,
+.ring5{
   position: absolute; 
   width: 80px;
   height: 80px;
   border-radius: 50%;
   border:5px solid;
+}
+
+.ring1{
   border-color: purple;
 }
 .ring2{
-  position: absolute; 
   left: 100px;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  border:5px solid;
   border-color: black;
 }
 
 .ring3{
-  position: absolute; 
   left: 200px;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  border:5px solid;
   border-color: red;
 }
 
 
 .ring4{
-  position: absolute;
   top: 45px;
   left: 50px;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  border:5px solid;
   border-color: yellow;
 }
 
 .ring5{
-  position: absolute;
   top: 45px;
   left: 150px;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  border:5px solid;
   border-color: green;
 }
 
