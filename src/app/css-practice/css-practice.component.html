@@ -1,6 +1,6 @@
 <ul>
   <li>
-    <p>选择器权重：</p>
+    <h2>选择器权重：</h2>
     <table class="mat-elevation-z8" mat-table [dataSource]="weights">
       <ng-container matColumnDef="selector">
         <th mat-header-cell *matHeaderCellDef>选择器</th>
@@ -15,15 +15,15 @@
     </table>
   </li>
   <li>
-    <p>
+    <h2>
       巧妙使用 border 属性：
-    </p>
+    </h2>
     <div id="border-test"></div>
   </li>
   <li>
-    <p>
+    <h2>
       行级/块级/行块级选择器：
-    </p>
+    </h2>
     <table class="mat-elevation-z8" mat-table [dataSource]="inline_block_selectors">
       <ng-container matColumnDef="type">
         <th mat-header-cell *matHeaderCellDef>选择器类型</th>
@@ -46,9 +46,9 @@
     </table>
   </li>
   <li>
-    <p>
+    <h2>
       盒子模型使用：
-    </p>
+    </h2>
     <div class="box1">
       <div class="box2">
         <div class="box3">
@@ -58,9 +58,9 @@
     </div>
   </li>
   <li>
-    <p>
+    <h2>
       定位：
-    </p>
+    </h2>
     <p>
       <span>
         <strong>absolute:</strong>
@@ -79,11 +79,11 @@
         <span style="color: #f40">relative作为参照物，absolute用来定位（不会因为父级位置变动导致定位错乱）。</span>
       </span>
     </p>
-  </li> 
+  </li>
   <li>
-    <p>
+    <h2>
       居中五环：
-    </p>
+    </h2>
     <button mat-raised-button (click)="show_rings = !show_rings">{{show_rings?'hide':'show'}}</button>
     <div *ngIf="show_rings" class="five-rings">
       <div class="ring1"></div>
@@ -92,6 +92,115 @@
       <div class="ring4"></div>
       <div class="ring5"></div>
     </div>
+  </li>
+  <li>
+    <h2>margin 塌陷：</h2>
+    <p><strong>表现：</strong>父子嵌套的元素，垂直方向的 margin 会取父子中最大的值(父元素的margin-top大，子元素margin-top无效。反之，子元素带着父元素一起动)</p>
+    <p><strong>原因：</strong>父元素的顶部没有作为子元素 margin 时的参照物，好像顶部塌陷了一样。</p>
+    <p><strong>解决：bfc (block format context -> 改变元素渲染规则)</strong> </p>
+    <p><strong>如何触发bfc:</strong></p>
+    <ul>
+      <li>position:absolute</li>
+      <li>display:inline-block</li>
+      <li>float:left/right</li>
+      <li>overflow:hidden</li>
+    </ul>
+    <div>
+      <mat-form-field>
+        <mat-select placeholder="父组件 margin-top" [(value)]="parent_mt">
+          <mat-option *ngFor="let margin of margins_top" [value]="margin.value">
+            {{margin.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select placeholder="子组件 margin-top" [(value)]="child_mt">
+          <mat-option *ngFor="let margin of margins_top" [value]="margin.value">
+            {{margin.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select placeholder="父组件 bfc" [(value)]="bfc">
+          <mat-option *ngFor="let bfc of bfc_list" [value]="bfc.value">
+            {{bfc.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
 
+    <div class="wrapper {{parent_mt}} {{bfc}}">
+      <div class="content {{child_mt}}"></div>
+    </div>
+  </li>
+  <li>
+    <h2>margin 合并：</h2>
+    <p><strong>表现：</strong>两个兄弟元素垂直方向的 margin 是合并的</p>
+    <p><strong>解决：不解决</strong> </p>
+    <div>
+      <mat-form-field>
+        <mat-select placeholder="上组件 margin-bottom" [(value)]="up_m">
+          <mat-option *ngFor="let margin of margins_bottom" [value]="margin.value">
+            {{margin.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select placeholder="下组件 margin-top" [(value)]="down_mt">
+          <mat-option *ngFor="let margin of margins_top" [value]="margin.value">
+            {{margin.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="red {{up_m}}">1</div>
+    <div class="green {{down_mt}}">2</div>
+  </li>
+
+  <li>
+    <h2>浮动元素</h2>
+    <p><strong>注意：</strong>浮动元素会产生浮动流。</p>
+    <p><strong>影响：</strong></p>
+    <ul>
+      <li>所有产生了浮动流的元素，块级元素看不到他们(元素会层叠放置)</li>
+      <li>文本类属性的元素(inline)、文本、产生了bfc的元素 能看到浮动元素(不会占据浮动元素的位置)</li>
+    </ul>
+    <div style="display:flex">
+      <div style="flex: 1">
+        <div style="width:100px;height:100px;background-color:#f40;opacity: 0.5;float:left;">浮动元素</div>
+        <div style="width:200px;height:200px;background-color:#513">块级元素</div>
+      </div>
+      <div style="flex: 1">
+        <div style="width:100px;height:100px;background-color:#f40;opacity: 0.5;float:left;">浮动元素</div>
+        <span>文本</span>
+      </div>
+      <div style="flex: 1">
+        <div style="width:100px;height:100px;background-color:#f40;opacity: 0.5;float:left;">浮动元素</div>
+        <div style="width:200px;height:200px;background-color:#513; overflow: hidden;">产生了bfc的元素</div>
+      </div>
+      <div style="flex: 1">
+        <div style="width:100px;height:100px;background-color:#f40;opacity: 0.5;float:left;">浮动元素</div>
+        <img style="width:200px;height:200px;" src="../../assets/img/test.png" />
+      </div>
+    </div>
+    <p><strong>清除浮动流：</strong>在浮动元素的下会产生浮动流，可以利用伪元素清除浮动流，在before/after伪元素中加 clear，由于clear必须作用于块级元素，所以还得加 display:block</p>
+  </li>
+  <li>
+    <h2>冷门知识</h2>
+    <p>设置了 position：absolute 或者 float:left/right 后， 元素自动变成inline-block元素</p>
+  </li>
+  <li>
+    <h2>淘宝导航栏</h2>
+    <ul class="nav">
+      <li class="list-item">
+        <a href="#">天猫</a>
+      </li>
+      <li class="list-item">
+        <a href="#">聚划算</a>
+      </li>
+      <li class="list-item">
+        <a href="#">天猫超市</a>
+      </li>
+    </ul>
   </li>
 </ul>

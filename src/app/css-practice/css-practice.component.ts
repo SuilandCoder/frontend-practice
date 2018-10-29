@@ -49,9 +49,64 @@ export class CssPracticeComponent {
     }
   ]
 
+  margins_top = [
+    {
+      value:"m-0",
+      viewValue:"margin-top:0px"
+    },
+    {
+      value:"mt-50",
+      viewValue: "margin-top:50px"
+    },{
+      value:"mt-100",
+      viewValue:'margin-top:100px'
+    }
+  ]
+
+  margins_bottom=[
+    {
+      value:"m-0",
+      viewValue:"margin-bottom:0px"
+    },{
+      value:"mb-50",
+      viewValue: "margin-bottom:50px"
+    },{
+      value:"mb-100",
+      viewValue: "margin-bottom:100px"
+    }
+  ]
+
+  bfc_list = [
+    {
+      value:'pos-ab',
+      viewValue:'position:absolute',
+    },{
+      value:'disp-in-b',
+      viewValue:'display:inline-bolck',
+    },
+    {
+      value:'float-l',
+      viewValue:'float:left',
+    },
+    {
+      value:'float-r',
+      viewValue:'float:right',
+    },{
+      value:'overflow-h',
+      viewValue:'overflow:hidden'
+    },{
+      value:'',
+      viewValue:'none',
+    }
+  ]
+
+  child_mt:any;
+  parent_mt:any;
 
   displayedColumns: string[] = ["selector", "weights"];
   dis_col_ibs: string[] = ["type","feature","tags","attr"];
+
+  show_rings = false;
 
   constructor() { }
 

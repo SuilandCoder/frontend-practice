@@ -90,3 +90,99 @@ table{
 }
 
 
+.wrapper{
+  width:200px;
+  height: 200px;
+  background-color: aqua; 
+  
+}
+
+.content{
+  width: 100px;
+  height: 100px;
+  background-color: #f40; 
+}
+
+.mt-50{
+  margin-top: 50px;
+}
+
+.mt-100{
+  margin-top:100px;
+}
+
+.m-0{
+  margin-top: 0px;
+}
+
+.mb-50{
+  margin-bottom:50px;
+}
+
+.mb-100{
+  margin-bottom: 100px;
+}
+
+.pos-ab{
+  position: absolute;
+}
+
+.disp-in-b{
+  display: inline-block;
+}
+
+.float-l{
+  float: left;
+}
+
+.float-r{
+  float: right;
+}
+
+.overflow-h{
+  overflow: hidden;
+}
+
+.red{
+  background-color: red;
+}
+
+.green{
+  background-color: green;
+}
+
+
+/* 淘宝导航栏 */
+.nav{
+  list-style: none;
+}
+
+/* 清除浮动流 */
+.nav::after{
+  content: "";
+  clear:both;
+  display: block;
+}
+
+.nav .list-item{
+  float: left;
+  height: 30px;
+  line-height: 30px; 
+}
+
+.nav .list-item a{
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 0 10px; 
+  height: 30px;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  color: #f40;
+  border-radius: 15px;
+}
+
+.nav .list-item a:hover{
+  background-color: #f40;
+  color: #fff;
+}

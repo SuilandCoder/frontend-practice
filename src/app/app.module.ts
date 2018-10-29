@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { CssPracticeComponent } from './css-practice/css-practice.component';
 import { PracticeListComponent } from './practice-list/practice-list.component'; 
 import { MatIconModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,8 @@ import { MatIconModule } from '@angular/material';
     MatIconModule,
     MatGridListModule,
     AppRoutingModule,
-    MatSharedModule
+    MatSharedModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
