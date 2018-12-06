@@ -1,0 +1,100 @@
+.list-item {
+  width: 310px;
+  border-radius: 5px;
+  padding: 20px;
+  margin: -1px 0 0 -1px;
+  display: flex;
+  flex-flow: column nowrap;
+  // align-items: stretch;
+  height: 100%;
+
+  .panel-item-header {
+    padding: 0 0 10px;
+    margin-left: -16px;
+    margin-right: 10px;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    line-height: 1.5em;
+    background: white;
+
+    a {
+        word-break: break-all;
+    }
+}
+
+.panel-item-header:after {
+    content: '...'; //the ellipsis
+    position: absolute; //positioned in bottom-right
+    bottom: 0; //...
+    right: 0; //...
+    line-height: 1em;
+    padding: 0 0 10px; //give some separation from text
+    background: inherit; //same color as container
+}
+
+.panel-item-header a:after {
+    content: '\0000a0'; //a space
+    position: absolute; //to cover up ellipsis if needed
+    width: 1000px; //...
+    z-index: 1; //... 
+    background: white; //must match container's color.  can't use inherit here.
+}
+
+
+  .panel-item-body {
+    flex: 1 1 auto;
+    height: 80px;
+    overflow: hidden;
+    line-height: 2em;
+  }
+
+  .panel-item-footer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    span {
+      display: flex;
+      flex-flow: row nowrap;
+    }
+  }
+}
+
+#create-btn {
+  position: absolute;
+  right: 30px;
+  top: -28px;
+  z-index: 100;
+}
+
+.lh-2 {
+  line-height: 2em;
+} 
+
+.wrapper {
+    width:200px;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    line-height: 2em;
+    background: white;   //or other color
+ }
+ 
+ .wrapper:after {
+   content: '...';       //the ellipsis
+   position: absolute;   //positioned in bottom-right
+   bottom: 0;            //...
+   right: 0;             //...
+   line-height: 1em;
+   padding: 0 0.3em;     //give some separation from text
+   background: inherit;  //same color as container
+ }
+ 
+ .wrapper span:after {
+   content: '\0000a0';   //a space
+   position: absolute;   //to cover up ellipsis if needed
+   width: 1000px;        //...
+   z-index: 1;           //... 
+   background: white;    //must match container's color.  can't use inherit here.
+ }

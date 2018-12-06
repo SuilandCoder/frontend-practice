@@ -8,13 +8,17 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { AppRoutingModule } from './app-routing.module';
 import { CssPracticeComponent } from './css-practice/css-practice.component';
 import { PracticeListComponent } from './practice-list/practice-list.component'; 
-import { MatIconModule } from '@angular/material';
+import { MatIconModule, MatCardModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { GithubStyleComponent } from './github-style/github-style.component';
+import { RxjsDemoComponent } from './rxjs-demo/rxjs-demo.component';
 @NgModule({
   declarations: [
     AppComponent,
     CssPracticeComponent,
-    PracticeListComponent
+    PracticeListComponent,
+    GithubStyleComponent,
+    RxjsDemoComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +26,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatGridListModule,
     AppRoutingModule,
     MatSharedModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule, 
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

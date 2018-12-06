@@ -12,8 +12,8 @@ export class PracticeListComponent implements OnInit {
       route:"css-practice"
     },
     {
-      name:"",
-      route:""
+      name:"GitHub Style",
+      route:"github-style"
     },
     {
       name:"",

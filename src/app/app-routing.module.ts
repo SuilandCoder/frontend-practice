@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CssPracticeComponent } from './css-practice/css-practice.component';
 import {RouterModule, Routes} from '@angular/router';
+import { GithubStyleComponent } from './github-style/github-style.component';
 
 const routes: Routes = [
   {
@@ -18,7 +19,10 @@ const routes: Routes = [
   {
     path:'css-practice',
     component: CssPracticeComponent
-  },
+  },{
+    path:'github-style',
+    component: GithubStyleComponent
+  }
 ]
 
 
