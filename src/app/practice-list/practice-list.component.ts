@@ -16,12 +16,12 @@ export class PracticeListComponent implements OnInit {
       route:"github-style"
     },
     {
-      name:"",
-      route:""
+      name:"RxJs Demo",
+      route:"rxjs-demo"
     },
     {
-      name:"",
-      route:""
+      name:"Expand Bar",
+      route:"expand-bar"
     },
   ]
   constructor() { }

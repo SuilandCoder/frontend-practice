@@ -12,13 +12,16 @@ import { MatIconModule, MatCardModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GithubStyleComponent } from './github-style/github-style.component';
 import { RxjsDemoComponent } from './rxjs-demo/rxjs-demo.component';
+import { ExpandBarComponent } from './expand-bar/expand-bar.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
 @NgModule({
   declarations: [
     AppComponent,
     CssPracticeComponent,
     PracticeListComponent,
     GithubStyleComponent,
-    RxjsDemoComponent
+    RxjsDemoComponent,
+    ExpandBarComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,8 @@ import { RxjsDemoComponent } from './rxjs-demo/rxjs-demo.component';
     AppRoutingModule,
     MatSharedModule,
     BrowserAnimationsModule, 
-    MatCardModule
+    MatCardModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

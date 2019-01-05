@@ -1,0 +1,33 @@
+<div>
+  <div class="header">header</div>
+
+  <div class="content" [style.height]="LayersListHeight.toString()+'px'">
+    <mat-drawer-container class="example-container" autosize>
+      <mat-drawer #drawer class="example-sidenav" [(opened)]="leftOpened" mode="side">
+        <p>Auto-resizing sidenav lor sit amet consect lor sit amet consect lor sit amet consect</p>
+        <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+        <button (click)="showFiller = !showFiller" mat-raised-button>
+          Toggle extra text
+        </button>
+      </mat-drawer>
+
+      <div class="example-sidenav-content">
+        <button class="left_bt" type="button" mat-raised-button (click)="drawer.toggle()">
+          {{leftOpened?rightBt:leftBt}}
+        </button>
+        <button class="right_bt" type="button" mat-raised-button (click)="drawerEnd.toggle()">
+          {{rightOpened?leftBt:rightBt}} 
+        </button> 
+      </div> 
+        <mat-drawer #drawerEnd class="example-sidenav"  [(opened)]="rightOpened" mode="side" position="end">
+            <p>Auto-resizing sidenav lor sit amet consect lor sit amet consect lor sit amet consect</p>
+            <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+            <button (click)="showFiller = !showFiller" mat-raised-button>
+              Toggle extra text
+            </button>
+        </mat-drawer>
+    </mat-drawer-container>
+  </div>
+
+  <div class="footer"> footer </div>
+</div>

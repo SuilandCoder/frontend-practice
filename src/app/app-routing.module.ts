@@ -5,6 +5,8 @@ import { CommonModule } from '@angular/common';
 import { CssPracticeComponent } from './css-practice/css-practice.component';
 import {RouterModule, Routes} from '@angular/router';
 import { GithubStyleComponent } from './github-style/github-style.component';
+import { RxjsDemoComponent } from './rxjs-demo/rxjs-demo.component';
+import { ExpandBarComponent } from './expand-bar/expand-bar.component';
 
 const routes: Routes = [
   {
@@ -22,6 +24,12 @@ const routes: Routes = [
   },{
     path:'github-style',
     component: GithubStyleComponent
+  },{
+    path:'rxjs-demo',
+    component: RxjsDemoComponent
+  },{
+    path:'expand-bar',
+    component:ExpandBarComponent
   }
 ]
 
