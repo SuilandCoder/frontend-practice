@@ -31,11 +31,7 @@
     height: 50px;
     background-color: aqua;
     text-align: center;
-}
-
-.content{
-}
-
+} 
 .footer{
     position: fixed;
     left: 0;

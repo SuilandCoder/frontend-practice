@@ -7,6 +7,7 @@ import {RouterModule, Routes} from '@angular/router';
 import { GithubStyleComponent } from './github-style/github-style.component';
 import { RxjsDemoComponent } from './rxjs-demo/rxjs-demo.component';
 import { ExpandBarComponent } from './expand-bar/expand-bar.component';
+import { SideBarComponent } from './side-bar/side-bar.component';
 
 const routes: Routes = [
   {
@@ -30,6 +31,9 @@ const routes: Routes = [
   },{
     path:'expand-bar',
     component:ExpandBarComponent
+  },{
+    path:'side-bar',
+    component:SideBarComponent
   }
 ]
 

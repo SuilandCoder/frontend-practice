@@ -14,6 +14,9 @@ import { GithubStyleComponent } from './github-style/github-style.component';
 import { RxjsDemoComponent } from './rxjs-demo/rxjs-demo.component';
 import { ExpandBarComponent } from './expand-bar/expand-bar.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { SideBarComponent } from './side-bar/side-bar.component';
+import { SidebarModule } from 'ng-sidebar';
+import { SagaPluginComponent } from './saga-plugin/saga-plugin.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +25,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     GithubStyleComponent,
     RxjsDemoComponent,
     ExpandBarComponent,
+    SideBarComponent,
+    SagaPluginComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +36,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatSharedModule,
     BrowserAnimationsModule, 
     MatCardModule,
-    MatSidenavModule
+    MatSidenavModule,
+    SidebarModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

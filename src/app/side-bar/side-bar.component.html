@@ -1,0 +1,20 @@
+<div class="header">header</div>
+
+<ng-sidebar-container class="sidebar_container">
+     <!-- A sidebar -->
+     <ng-sidebar  [(opened)]="_opened" position="end">
+
+      <div class="left_side">
+          <p>Sidebar contents</p>
+          <button (click)="_toggleSidebar()">close</button>
+      </div>
+        
+      </ng-sidebar>
+
+      <!-- Page content -->
+      <div ng-sidebar-content>
+        <button (click)="_toggleSidebar()">Toggle sidebar</button>
+      </div>
+</ng-sidebar-container>
+
+<div class="footer"> footer </div>

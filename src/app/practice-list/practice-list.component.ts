@@ -22,7 +22,13 @@ export class PracticeListComponent implements OnInit {
     {
       name:"Expand Bar",
       route:"expand-bar"
-    },
+    },{
+      name:"Side Bar",
+      route:"side-bar"
+    },{
+      name:"saga plugin",
+      route:"saga-plugin"
+    }
   ]
   constructor() { }
 
