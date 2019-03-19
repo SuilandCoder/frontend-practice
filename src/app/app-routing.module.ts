@@ -1,13 +1,15 @@
-import { PracticeListComponent } from './practice-list/practice-list.component';
-import { AppComponent } from './app.component';
+import { DataPickComponent } from './practice-list/data-pick/data-pick.component';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { CssPracticeComponent } from './css-practice/css-practice.component';
+
+import { PracticeListComponent } from './practice-list/practice-list.component';  
 import {RouterModule, Routes} from '@angular/router';
-import { GithubStyleComponent } from './github-style/github-style.component';
-import { RxjsDemoComponent } from './rxjs-demo/rxjs-demo.component';
-import { ExpandBarComponent } from './expand-bar/expand-bar.component';
-import { SideBarComponent } from './side-bar/side-bar.component';
+import { CssPracticeComponent } from './practice-list/css-practice/css-practice.component';
+import { GithubStyleComponent } from './practice-list/github-style/github-style.component';
+import { RxjsDemoComponent } from './practice-list/rxjs-demo/rxjs-demo.component';
+import { ExpandBarComponent } from './practice-list/expand-bar/expand-bar.component';
+import { SideBarComponent } from './practice-list/side-bar/side-bar.component';
+import { SagaPluginComponent } from './practice-list/saga-plugin/saga-plugin.component';
+import { GridLayoutComponent } from './practice-list/grid-layout/grid-layout.component';
 
 const routes: Routes = [
   {
@@ -34,6 +36,15 @@ const routes: Routes = [
   },{
     path:'side-bar',
     component:SideBarComponent
+  },{
+    path:'saga-plugin',
+    component:SagaPluginComponent
+  },{
+    path:'grid-layout',
+    component:GridLayoutComponent
+  },{
+    path:'data-pick',
+    component:DataPickComponent
   }
 ]
 

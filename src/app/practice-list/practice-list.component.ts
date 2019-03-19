@@ -28,6 +28,12 @@ export class PracticeListComponent implements OnInit {
     },{
       name:"saga plugin",
       route:"saga-plugin"
+    },{
+      name:"grid layout",
+      route:"grid-layout"
+    },{
+      name:"data pick",
+      route:"data-pick"
     }
   ]
   constructor() { }

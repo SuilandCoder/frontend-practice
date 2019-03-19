@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import { Observable } from 'rx';
-import { getRepos, getUser } from '../../assets/js/helper'
-import { reposTemplate,userTemplate } from '../../assets/js/templates'
+import { getRepos, getUser } from 'src/assets/js/helper'
+import { reposTemplate,userTemplate } from 'src/assets/js/templates'
 import { container } from '@angular/core/src/render3/instructions';
 
 

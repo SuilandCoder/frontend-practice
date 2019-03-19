@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./saga-plugin.component.css']
 })
 export class SagaPluginComponent implements OnInit {
-
+  information = "this is information"
   constructor() { }
 
   ngOnInit() {
