@@ -10,6 +10,7 @@ import { ExpandBarComponent } from './practice-list/expand-bar/expand-bar.compon
 import { SideBarComponent } from './practice-list/side-bar/side-bar.component';
 import { SagaPluginComponent } from './practice-list/saga-plugin/saga-plugin.component';
 import { GridLayoutComponent } from './practice-list/grid-layout/grid-layout.component';
+import { OlTdtComponent } from './practice-list/ol-tdt/ol-tdt.component';
 
 const routes: Routes = [
   {
@@ -45,6 +46,9 @@ const routes: Routes = [
   },{
     path:'data-pick',
     component:DataPickComponent
+  },{
+    path:'ol-tdt',
+    component:OlTdtComponent
   }
 ]
 

@@ -34,6 +34,9 @@ export class PracticeListComponent implements OnInit {
     },{
       name:"data pick",
       route:"data-pick"
+    },{
+      name:"ol 天地图",
+      route:"ol-tdt"
     }
   ]
   constructor() { }

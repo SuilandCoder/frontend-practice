@@ -24,6 +24,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { DataPickComponent, InputDialog } from './practice-list/data-pick/data-pick.component';
 import {MatMenuModule} from '@angular/material/menu';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
+import { OlTdtComponent } from './practice-list/ol-tdt/ol-tdt.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +38,7 @@ import { NgZorroAntdModule } from 'ng-zorro-antd';
     GridLayoutComponent,
     DataPickComponent,
     InputDialog,
+    OlTdtComponent,
   ],
   imports: [
     BrowserModule,
