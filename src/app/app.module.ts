@@ -1,20 +1,44 @@
-import { MatSharedModule } from './common/mat-shared/index';
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { MatSharedModule } from './common/mat-shared/index';
+import { BrowserModule } from '@angular/platform-browser'; 
 
 import { AppComponent } from './app.component';
 
 import {MatGridListModule} from '@angular/material/grid-list';
-import { AppRoutingModule } from './app-routing.module';
-import { CssPracticeComponent } from './css-practice/css-practice.component';
+import { AppRoutingModule } from './app-routing.module'; 
 import { PracticeListComponent } from './practice-list/practice-list.component'; 
-import { MatIconModule } from '@angular/material';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule, MatCardModule, MatDialogModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+import {MatSidenavModule} from '@angular/material/sidenav'; 
+import { SidebarModule } from 'ng-sidebar'; 
+import { CssPracticeComponent } from './practice-list/css-practice/css-practice.component';
+import { GithubStyleComponent } from './practice-list/github-style/github-style.component';
+import { RxjsDemoComponent } from './practice-list/rxjs-demo/rxjs-demo.component';
+import { ExpandBarComponent } from './practice-list/expand-bar/expand-bar.component';
+import { SideBarComponent } from './practice-list/side-bar/side-bar.component';
+import { SagaPluginComponent } from './practice-list/saga-plugin/saga-plugin.component';
+import { SagaModule } from 'saga-test-sj';
+import { GridLayoutComponent } from './practice-list/grid-layout/grid-layout.component';
+
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { DataPickComponent, InputDialog } from './practice-list/data-pick/data-pick.component';
+import {MatMenuModule} from '@angular/material/menu';
+import { NgZorroAntdModule } from 'ng-zorro-antd';
+import { OlTdtComponent } from './practice-list/ol-tdt/ol-tdt.component';
 @NgModule({
   declarations: [
     AppComponent,
     CssPracticeComponent,
-    PracticeListComponent
+    PracticeListComponent,
+    GithubStyleComponent,
+    RxjsDemoComponent,
+    ExpandBarComponent,
+    SideBarComponent,
+    SagaPluginComponent,
+    GridLayoutComponent,
+    DataPickComponent,
+    InputDialog,
+    OlTdtComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,9 +46,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatGridListModule,
     AppRoutingModule,
     MatSharedModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule, 
+    MatCardModule,
+    MatSidenavModule, 
+    SagaModule,
+    MatDialogModule,
+    MatMenuModule,
+    MatPaginatorModule,
+    NgZorroAntdModule,
+    SidebarModule.forRoot()
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[
+    InputDialog
+  ]
 })
 export class AppModule { }

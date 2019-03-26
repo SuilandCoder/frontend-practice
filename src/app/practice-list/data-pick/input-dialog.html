@@ -1,0 +1,37 @@
+<div class="dialog_room">
+  <h3>select input datas</h3>
+  <div class="data_room">
+    <div class="picked">
+      <div class="item" *ngFor="let item of datas">
+        <img src="/src/assets/img/test.png" alt="">
+        <span>{{item.name}}</span>
+      </div>
+    </div>
+    <hr>
+    <div class="data_res">
+      <div class="data_res_control">
+        <div class="search" *ngIf="show_search">
+          <button mat-button mat-icon-button (click)="search()">
+            <mat-icon _ngcontent-c5="" class="mat-icon material-icons" role="img" style="margin-top: 3px;" aria-hidden="true">search</mat-icon>
+          </button>
+
+          <input type="text" ngFileSelect placeholder="Search">
+        </div>
+
+        <button mat-stroked-button [matMenuTriggerFor]="menu">add data</button>
+        <mat-menu #menu="matMenu">
+          <label mat-menu-item class="upload-button" (click)="fromLocal()">
+            <input type="file" ngFileSelect accept="application/zip" multiple="multiple" />
+            <span style="margin-bottom:25px">Local Data</span>
+          </label>
+          <button mat-menu-item (click)="fromLayers()">Layer List</button>
+          <button mat-menu-item (click)="fromUser()">User Storage</button>
+          <button mat-menu-item (click)="fromDataContainer()">search from data container</button>
+        </mat-menu>
+      </div>
+      <nz-transfer [nzDataSource]="list" [nzTitles]="['Source', 'Target']" (nzSelectChange)="select($event)" (nzChange)="change($event)">
+        </nz-transfer>
+
+    </div>
+  </div>
+</div>

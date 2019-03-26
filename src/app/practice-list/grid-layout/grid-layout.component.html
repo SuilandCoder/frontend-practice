@@ -1,0 +1,34 @@
+<div class="wrapper">
+  <div id="item1">
+      <i class="material-icons">
+          gradient
+          </i>
+  </div>
+  <div id="item2">Line.zip</div>
+  <div id="item3">2019-03-14</div>
+  <div id="item4">type: SHAPEFILE</div>
+  <div id="item5">
+    <span>
+      saga
+    </span>
+    <span>
+      shape
+    </span>
+  </div>
+</div>
+
+
+<div class="grid_wrapper">
+  <div class="grid" *ngFor="let item of datas">
+    <img src="/src//assets/img/test.png" alt="">
+      <span>{{item.name}}</span>
+  </div>
+</div>
+
+<mat-paginator [length]="length"
+              [pageSize]="pageSize"
+              (page)="pageEvent = $event"
+              [showFirstLastButtons]="true">
+</mat-paginator>
+
+<button (click)="firstPage()">ssdf</button>

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PracticeListComponent } from './practice-list.component';
+import { GithubStyleComponent } from './github-style.component';
 
-describe('PracticeListComponent', () => {
-  let component: PracticeListComponent;
-  let fixture: ComponentFixture<PracticeListComponent>;
+describe('GithubStyleComponent', () => {
+  let component: GithubStyleComponent;
+  let fixture: ComponentFixture<GithubStyleComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PracticeListComponent ]
+      declarations: [ GithubStyleComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PracticeListComponent);
+    fixture = TestBed.createComponent(GithubStyleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
