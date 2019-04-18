@@ -37,6 +37,12 @@ export class PracticeListComponent implements OnInit {
     },{
       name:"ol 天地图",
       route:"ol-tdt"
+    },{
+      name:"Zone.js 测试",
+      route:"zone-test"
+    },{
+      name:"set-get 测试",
+      route:"set-get"
     }
   ]
   constructor() { }

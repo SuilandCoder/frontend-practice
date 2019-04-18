@@ -1,3 +1,5 @@
+import { SetGetComponent } from './practice-list/set-get/set-get.component';
+import { ZoneTestComponent } from './practice-list/zone-test/zone-test.component';
 import { DataPickComponent } from './practice-list/data-pick/data-pick.component';
 import { NgModule } from '@angular/core';
 
@@ -49,6 +51,12 @@ const routes: Routes = [
   },{
     path:'ol-tdt',
     component:OlTdtComponent
+  },{
+    path:'zone-test',
+    component:ZoneTestComponent
+  },{
+    path:"set-get",
+    component:SetGetComponent
   }
 ]
 

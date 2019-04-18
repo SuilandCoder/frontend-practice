@@ -25,6 +25,9 @@ import { DataPickComponent, InputDialog } from './practice-list/data-pick/data-p
 import {MatMenuModule} from '@angular/material/menu';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { OlTdtComponent } from './practice-list/ol-tdt/ol-tdt.component';
+import { ZoneTestComponent } from './practice-list/zone-test/zone-test.component';
+import { SetGetComponent } from './practice-list/set-get/set-get.component';
+import { SetGetChildComponent } from './practice-list/set-get/set-get-child/set-get-child.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +42,9 @@ import { OlTdtComponent } from './practice-list/ol-tdt/ol-tdt.component';
     DataPickComponent,
     InputDialog,
     OlTdtComponent,
+    ZoneTestComponent,
+    SetGetComponent,
+    SetGetChildComponent,
   ],
   imports: [
     BrowserModule,
