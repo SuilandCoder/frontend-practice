@@ -1,0 +1,56 @@
+<div class="my_dialog_test" *ngIf="show">
+    <div class="header">
+        <h3>Upload File</h3>
+    </div>
+    <div class="tips"> Currently only supports zip files</div>
+    <label class="upload_label">
+        <input class="add_file" type="file" ngFileSelect multiple="multiple" accept="aplication/zip" [options]="options"
+            [uploadInput]="uploadInput" (uploadOutput)="onUploadOutput($event)">
+        <span class="glyphicon glyphicon-plus"></span> Add files...
+    </label>
+    <div class="scrollbar file_list">
+        <ng-container *ngFor="let file of files">
+            <div class="file_item">
+                <span class="file_name">{{file.name}}</span>
+                <div class="file_info" *ngIf="file.progress.status==0|| file.progress.status==2">
+                    <span class="file_size">{{file.size | filesize}}</span>
+                    <button type="button" class="delete btn btn-default" aria-label="Left Align"
+                        (click)="removeFile(file.id)" *ngIf="file.progress.status==0">
+                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                    </button>
+                    <span class="upload_finish glyphicon glyphicon-ok" aria-hidden="true"
+                        *ngIf="file.progress.status==2"></span>
+                </div>
+                <div class="progess_info" *ngIf="file.progress.status==1||file.progress.status==3">
+                    <div class="upload_progress">
+                        <mat-progress-bar mode="determinate" value="{{file.progress.data.percentage}}">
+                        </mat-progress-bar>
+                        <div class="upload_info">
+                            <span class="uploaded_part">{{file.progress.data.percentage}}%</span>
+                            <div class="speed_time">
+                                <span class="speed">{{file.progress.data.speedHuman}}</span>
+                                <span class="eta">{{file.progress.data.etaHuman}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="cancel btn btn-default" aria-label="Left Align"
+                        (click)="cancelUpload(file.id)" *ngIf="file.progress.status==1">
+                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="cancel btn btn-default" aria-label="Left Align"
+                        (click)="resume(file.id)" *ngIf="file.progress.status==3">
+                        <span>resume</span>
+                    </button>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+    <div class="footer">
+        <button class="btn btn-info" (click)="startUpload()">upload</button>
+    </div>
+    <div class="right_btn btn-group">
+        <button type="button" class="btn btn-default" aria-label="Left Align" (click)="openMyDialog()">
+            <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+        </button>
+    </div>
+</div>

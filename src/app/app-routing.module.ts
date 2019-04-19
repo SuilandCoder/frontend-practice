@@ -1,3 +1,5 @@
+import { UploadFileComponent } from './practice-list/upload-file/upload-file.component';
+import { OlControlComponent } from './practice-list/ol-control/ol-control.component';
 import { SetGetComponent } from './practice-list/set-get/set-get.component';
 import { ZoneTestComponent } from './practice-list/zone-test/zone-test.component';
 import { DataPickComponent } from './practice-list/data-pick/data-pick.component';
@@ -57,6 +59,12 @@ const routes: Routes = [
   },{
     path:"set-get",
     component:SetGetComponent
+  },{
+    path:'ol-control',
+    component:OlControlComponent
+  },{
+    path:'file-upload',
+    component:UploadFileComponent
   }
 ]
 

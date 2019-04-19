@@ -1,0 +1,45 @@
+<div class="my_dialog">
+    <div class="header">
+        <h3>Upload File</h3>
+    </div>
+    <div class="tips"> Currently only supports zip files</div>
+    <button type="button" class="btn btn-success js-upload-files">
+        <span class="glyphicon glyphicon-plus"></span> Add files...
+    </button>
+    <div class="file_list">
+        <ng-container >
+            <div class="file_item">
+                <span class="file_name">这是一个文件</span>
+                <div class="file_info" *ngIf="false">
+                    <span class="file_size">333M</span>
+                    <button type="button" class="delete btn btn-default" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="progess_info" *ngIf="true">
+                    <div class="upload_progress">
+                        <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+                        <div class="upload_info">
+                            <span class="uploaded_part">40%</span>
+                            <div class="speed_time">
+                                <span class="speed">70KB/s</span>
+                                <span class="eta">ETA: 09:13:50</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+    <div class="footer">
+        <button class="btn btn-info">upload</button>
+    </div>
+    <div class="right_btn btn-group">
+        <button type="button" class="btn btn-default" aria-label="Left Align">
+            <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="btn btn-default" aria-label="Left Align">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+    </div>
+</div>

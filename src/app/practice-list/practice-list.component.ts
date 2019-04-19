@@ -43,6 +43,12 @@ export class PracticeListComponent implements OnInit {
     },{
       name:"set-get 测试",
       route:"set-get"
+    },{
+      name:"ol-control 测试",
+      route:'ol-control'
+    },{
+      name:"file-upload 对话框",
+      route:'file-upload'
     }
   ]
   constructor() { }
