@@ -1,0 +1,7 @@
+<h2>使用setter拦截输入属性</h2>
+<p>子组件可以拦截输入属性的数据并进行相应的处理</p>
+<p>getter和setter通常配套使用，用来对属性进行相关约束。setter可以对属性进行再封装处理，对复杂的内部逻辑通过访问权限控制来隔绝外部调用，以避免外部的错误调用影响到内部的状态</p>
+<button (click)="changeName()">change name</button>
+<div>
+  <set-get-child [contactObj]="contact"></set-get-child>
+</div>

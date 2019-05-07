@@ -1,0 +1,134 @@
+.my_dialog_test{
+    width: 600px;
+    height: 650px;
+    position: fixed;
+    top: 5%;
+    left:30%;
+    box-shadow: 0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12);
+    background: #fff;
+    color: rgba(0,0,0,.87);
+    padding: 20px;
+}
+.upload_label{
+    border: 1px solid #398439;
+    border-radius: 5px;
+    padding: 5px;
+    background: #449d44;
+    color: #fff;
+}
+
+.add_file{
+    display:none;
+}
+
+h3{
+    margin-top: 0px;
+}
+
+
+.test{
+    background: none;
+}
+
+.tips{
+    margin-bottom: 10px;
+}
+
+.my_panel{
+    position: relative !important;
+}
+
+.file_list{
+    height: 80%;
+    padding: 20px;
+    overflow: auto;
+}
+.my_dialog{
+    position: relative;
+    height: 95%;
+}
+.right_btn{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.footer{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.file_item{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    margin-top: -1px;
+}
+
+.file_info{
+    height: 50px;
+    flex: 0 0 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.file_name{
+    flex: 0 0 30%;
+    margin-right: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.file_size{
+    flex: 0 0 60%;
+    margin-right: 30px;
+    text-align: center;
+}
+
+.delete{
+	flex: 0 0 10%;
+}
+
+.cancel{
+    flex: 0 0 10%
+}
+
+.upload_progress{
+    width: 65%;
+    margin-right: 4%;
+}
+mat-progress-bar{
+    margin-top: 20px;
+}
+
+.speed_time{
+    display: inline-block;
+    float: right;
+}
+
+.upload_info{
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.progess_info{
+    flex: 0 0 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload_finish{
+    flex: 0 0 10%;
+    color: #449d44;
+}
+
+.speed{
+    margin-right: 5px;
+}

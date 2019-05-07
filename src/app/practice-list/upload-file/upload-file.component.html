@@ -1,0 +1,5 @@
+<!-- Large modal -->
+<button (click)="openDialog()">show dialog</button>
+<button (click)="openMyDialog()">show mydialog</button>
+
+<app-upload-dialog [show]="show" (showEmiter)="openMyDialog()"> </app-upload-dialog>

@@ -1,0 +1,44 @@
+<div>
+  <input type="text" [(ngModel)]="userName">
+  <h4>当前用户：{{userName}}</h4>
+  <div>
+    <b>{{article.userName}}</b>
+    <span>{{article.title}}</span>
+
+  </div>
+  <p>
+      {{article.content}}
+    </p>
+  <div>
+    <span>{{article.time}}</span>
+    <!-- <span>comments:{{article.comments.length}}</span> -->
+    <button (click)="addCommentToArticle(article,article.userName)">add comment</button>
+    <button (click)="getArticleComment(article)">show comment</button>
+  </div>
+
+  <ng-container *ngIf="article.commentList">
+      <div *ngFor="let comment of article.commentList">
+          <div>
+            <span *ngIf="comment.commenter===comment.hostName">(楼主)</span>
+            <span style="color:aqua">{{comment.commenter}}:to</span><span style="color:#f00">{{comment.commentee}}</span>
+            <p>{{comment.content}}</p>
+            <!-- <span>comments:{{comment.comments.length}}</span> -->
+            <button (click)="addCommentToComment(comment,comment.commenter)">add comment</button>
+            <!-- <button (click)="getComComment(comment)">show comment</button> -->
+          </div>
+          <ng-container *ngIf="comment.commentList">
+              <div *ngFor="let item of comment.commentList">
+                  <span *ngIf="item.commenter===item.hostName">(楼主)</span>
+                  <span style="color:aqua">{{item.commenter}}:to</span><span style="color:#f00">{{item.commentee}}</span>
+                  <p>{{item.content}}</p>
+                  <!-- <span>comments:{{comment.comments.length}}</span> -->
+                  <button (click)="addCommentToComment(item,item.commenter)">add comment</button>
+                  <!-- <button (click)="getComComment(comment)">show comment</button> -->
+                </div>
+          </ng-container>
+          
+        </div>
+  </ng-container> 
+
+  <hr>
+</div>

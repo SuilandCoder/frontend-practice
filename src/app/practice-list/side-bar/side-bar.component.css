@@ -19,7 +19,9 @@
     height: 700px;
 }
 
+
 .left_side{
     background-color: aquamarine;
     height: 100%;
+    max-width: 100px;
 }
