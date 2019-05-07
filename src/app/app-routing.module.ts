@@ -1,3 +1,5 @@
+import { CommentTestComponent } from './practice-list/comment-test/comment-test.component';
+import { NgStyleTestComponent } from './practice-list/ng-style-test/ng-style-test.component';
 import { UploadFileComponent } from './practice-list/upload-file/upload-file.component';
 import { OlControlComponent } from './practice-list/ol-control/ol-control.component';
 import { SetGetComponent } from './practice-list/set-get/set-get.component';
@@ -15,6 +17,7 @@ import { SideBarComponent } from './practice-list/side-bar/side-bar.component';
 import { SagaPluginComponent } from './practice-list/saga-plugin/saga-plugin.component';
 import { GridLayoutComponent } from './practice-list/grid-layout/grid-layout.component';
 import { OlTdtComponent } from './practice-list/ol-tdt/ol-tdt.component';
+import { ServiceTestComponent } from './practice-list/service-test/service-test.component';
 
 const routes: Routes = [
   {
@@ -65,6 +68,15 @@ const routes: Routes = [
   },{
     path:'file-upload',
     component:UploadFileComponent
+  },{
+    path:'ngStyle-test',
+    component:NgStyleTestComponent
+  },{
+    path:'comment-test',
+    component:CommentTestComponent
+  },{
+    path:'service-test',
+    component:ServiceTestComponent
   }
 ]
 

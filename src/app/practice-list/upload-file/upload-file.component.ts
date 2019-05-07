@@ -19,6 +19,7 @@ export class UploadFileComponent implements OnInit {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.backdropClass = null;
     const dialogRef = this.dialog.open(DialogTest, {
+      
       backdropClass: "test",
       panelClass:'my_panel',
       width: '650px',

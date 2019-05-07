@@ -20,7 +20,7 @@ import { SideBarComponent } from './practice-list/side-bar/side-bar.component';
 import { SagaPluginComponent } from './practice-list/saga-plugin/saga-plugin.component';
 import { SagaModule } from 'saga-test-sj';
 import { GridLayoutComponent } from './practice-list/grid-layout/grid-layout.component';
-
+import { CommonModule, PercentPipe } from '@angular/common';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { DataPickComponent, InputDialog } from './practice-list/data-pick/data-pick.component';
 import { MatMenuModule } from '@angular/material/menu';
@@ -34,7 +34,11 @@ import { UploadFileComponent, DialogTest } from './practice-list/upload-file/upl
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { UploadDialogComponent } from './practice-list/upload-file/upload-dialog/upload-dialog.component';
 import { NgxUploaderModule } from 'ngx-uploader';
-
+import { NgStyleTestComponent } from './practice-list/ng-style-test/ng-style-test.component';
+import { CommentTestComponent } from './practice-list/comment-test/comment-test.component';
+import { FormsModule } from '@angular/forms';
+import { ServiceTestComponent } from './practice-list/service-test/service-test.component';
+import { ChildComponent } from './practice-list/service-test/child/child.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,8 +61,14 @@ import { NgxUploaderModule } from 'ngx-uploader';
     DialogTest,
     UploadDialogComponent,
     FileSizePipe,
+    NgStyleTestComponent,
+    CommentTestComponent,
+    ServiceTestComponent,
+    ChildComponent,
   ],
   imports: [
+    FormsModule,
+    CommonModule,
     BrowserModule,
     MatTableModule,
     MatIconModule,

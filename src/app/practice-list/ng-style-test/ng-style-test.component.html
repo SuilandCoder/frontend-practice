@@ -1,0 +1,18 @@
+<div>
+  <img [ngStyle]="setStyle()" [src]="setSrc()" alt="">
+
+  <h1 [class.hidden]="false">class.hidden</h1>
+</div>
+<div *ngFor="let name of nameList">
+  <span [ngSwitch]="name">
+    <p *ngSwitchCase="1">
+      SongJie
+    </p>
+    <p *ngSwitchCase="2">
+      ZhangRuMeng
+    </p>
+    <p *ngSwitchDefault>
+      ToDo
+    </p>
+  </span>
+</div>
